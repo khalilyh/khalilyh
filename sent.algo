@@ -19,5 +19,5 @@ ALGORITHM count_sentence
                 word_count = word_count + 1
             END IF
         END FOR
-        WRITE ("The entered sentence contains ", length, " characters, ", word_count, " words, and ", vowel_count, " vowels.")
+        WRITE ("The entered sentence contains ", length, " characters, ", word_count, " words, " vowel_count, " vowels.")
     END
