@@ -1,0 +1,23 @@
+ALGORITHM count_sentence
+    VAR
+        sentence: STRING
+        length, word_count, vowel_count: INTEGER
+        char: CHARACTER
+    BEGIN
+        WRITE ("enter a sentence: ")
+        READ (sentence)
+
+        length = 0
+        word_count = 1
+        vowel_count = 0
+
+        FOR EACH char IN sentence DO
+            length = length + 1
+            IF char IS IN 'aeiouAEIOU' THEN
+                vowel_count = vowel_count + 1
+            ELSE IF char IS A SPACE THEN
+                word_count = word_count + 1
+            END IF
+        END FOR
+        WRITE ("The entered sentence contains ", length, " characters, ", word_count, " words, and ", vowel_count, " vowels.")
+    END
